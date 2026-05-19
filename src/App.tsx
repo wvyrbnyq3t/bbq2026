@@ -155,7 +155,7 @@ const App = () => {
       comment: "",
     },
     {
-      title: "男性で結構んできそうな人ランキング",
+      title: "男性で結婚できそうな人ランキング",
       id: "dansei_de_kekkon_deki_souna_hito",
       items: [
         {
@@ -177,7 +177,7 @@ const App = () => {
       comment: "",
     },
     {
-      title: "女性で結構んできそうな人ランキング",
+      title: "女性で結婚できそうな人ランキング",
       id: "josei_de_kekkon_deki_souna_hito",
       items: [
         {
