@@ -311,7 +311,7 @@ const App = () => {
                   </div>
                 ))}
                 <div style={{ marginTop: "var(--pdng-md)" }}>
-                  <p>ランキングに関するコメントがあればどうぞ</p>
+                  <p>このランキングの理由を教えてください</p>
                   <FormTextarea
                     value={data[index].comment}
                     onChange={(e) => {
