@@ -1,0 +1,202 @@
+:where(.c-avatar) {
+  :where(.c-avatar__inner) {
+    border: 0.2rem solid var(--c-active);
+    border-radius: 99rem;
+    color: var(--c-active);
+    height: var(--sz-avatar);
+    width: var(--sz-avatar);
+    overflow: hidden;
+
+    :where(.c-avatar__img) {
+      border: 0.2rem solid #ffffff;
+      border-radius: 99rem;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    :where(.c-avatar__icon) {
+      color: currentColor;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(var(--sz-avatar) * 0.55);
+      height: 100%;
+      width: 100%;
+
+      font-family: "material symbols outlined";
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: -11.5%;
+    }
+  }
+}
+
+:where(.c-badge) {
+  background-color: var(--c-active);
+  border-radius: 99rem;
+  color: #ffffff;
+  padding: 0.625em 1em;
+  display: inline-block;
+  line-height: 1;
+  width: fit-content;
+}
+:where(.c-badge--small) {
+  font-size: 1.2rem;
+  padding: 0.625em 1em;
+}
+
+:where(.c-button) {
+  border: 0.1rem solid transparent;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  line-height: 1;
+  min-height: 4.8rem;
+  padding: 1em 2em;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+  &:focus-visible {
+    outline: 0.1rem solid var(--c-active);
+  }
+}
+:where(.c-button--primary) {
+  background-color: var(--c-active);
+  color: #ffffff;
+
+  &[aria-disabled="true"] {
+    background-color: var(--c-deactive);
+    color: #ffffff;
+  }
+}
+:where(.c-button--secondary) {
+  background-color: #ffffff;
+  border-color: var(--c-active);
+  color: var(--c-active);
+
+  &[aria-disabled="true"] {
+    border-color: var(--c-deactive);
+    color: var(--c-deactive);
+  }
+}
+:where(.c-button--tertiary) {
+  background-color: transparent;
+  color: var(--c-active);
+
+  &[aria-disabled="true"] {
+    color: var(--c-deactive);
+
+    &:hover {
+      background-color: var(--bgc-gray);
+    }
+  }
+
+  &:not([aria-disabled="true"]) {
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--bgc-blue_pale);
+    }
+  }
+}
+:where(.c-button--danger) {
+  background-color: var(--c-red);
+  color: #ffffff;
+
+  &[aria-disabled="true"] {
+    background-color: var(--c-deactive);
+    color: #ffffff;
+  }
+}
+
+.c-card {
+  :where(.c-card__inner) {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.1rem var(--c-shadow);
+    border-radius: 0.8rem;
+  }
+}
+.c-card-content {
+  padding: var(--pdng-lg);
+}
+
+:where(.c-iconButton) {
+  background-color: transparent;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  color: var(--c-active);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--sz-iconButton);
+  width: var(--sz-iconButton);
+
+  font-family: "material symbols outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: calc(var(--sz-iconButton) * 0.625);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: -11.5%;
+
+  &[aria-disabled="true"] {
+    color: var(--c-deactive);
+    cursor: not-allowed;
+  }
+  &:focus-visible {
+    outline: 0.1rem solid var(--c-active);
+  }
+}
+
+:where(.c-icon) {
+  font-family: "material symbols outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: -11.5%;
+}
+
+.c-card {
+  :where(.c-card__inner) {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.1rem var(--c-shadow);
+    border-radius: 0.8rem;
+    overflow: hidden;
+  }
+}
+
+:where(.c-card-content) {
+  display: grid block;
+  gap: var(--pdng-sm);
+  padding: var(--pdng-md);
+}
