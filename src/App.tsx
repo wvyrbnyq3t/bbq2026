@@ -335,7 +335,10 @@ const App = () => {
           variant="primary"
           className="u-width--full"
           onClick={handleSubmit}
-          disabled={isSubmitting}
+          disabled={
+            isSubmitting ||
+            data.some((d) => d.items.some((item) => item.value === ""))
+          }
         >
           {isSubmitting ? "送信中..." : "送信する"}
         </Button>
