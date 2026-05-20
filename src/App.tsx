@@ -337,7 +337,8 @@ const App = () => {
           onClick={handleSubmit}
           aria-disabled={
             isSubmitting ||
-            data.some((d) => d.items.some((item) => item.value === ""))
+            // 順位の部分で一つ以上回答している
+            !data.some((d) => d.items.some((item) => item.value.trim() !== ""))
           }
         >
           {isSubmitting ? "送信中..." : "送信する"}
