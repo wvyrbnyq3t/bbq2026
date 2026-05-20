@@ -335,7 +335,7 @@ const App = () => {
           variant="primary"
           className="u-width--full"
           onClick={handleSubmit}
-          disabled={
+          aria-disabled={
             isSubmitting ||
             data.some((d) => d.items.some((item) => item.value === ""))
           }
