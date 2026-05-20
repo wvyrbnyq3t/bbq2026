@@ -33,6 +33,14 @@ const App = () => {
         throw new Error(result.message ?? "送信に失敗しました");
       }
 
+      // 送信した時に全ての回答を消す
+      setData((prev) =>
+        prev.map((d) => ({
+          ...d,
+          items: d.items.map((item) => ({ ...item, value: "" })),
+          comment: "",
+        }))
+      );
       alert("送信しました");
     } catch (error) {
       console.error(error);
